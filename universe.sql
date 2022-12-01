@@ -20,8 +20,8 @@ ALTER TABLE galaxy ADD COLUMN diameter_km NUMERIC,ADD COLUMN distance_from_earth
 \d galaxy
 INSERT INTO galaxy VALUES(1,'Andromeda',NULL,6.82,2,TRUE,TRUE,'Andromeda');
 INSERT INTO galaxy VALUES(2,'Circinus',1763,22.4,13,FALSE,TRUE,'Circinus');
-INSERT INTO galaxy VALUES (3,Milkey Way ,800, 0.002 ,180000, t , t,Sagittaru);
-INSERT INTO galaxy VALUES (4,Butterfly,1622 ,54.04 ,12200.t ,f , Virgo);
+INSERT INTO galaxy VALUES (3,'Milkey Way' ,800, 0.002 ,180000, t , t,Sagittaru);
+INSERT INTO galaxy VALUES (4,'Butterfly',1622 ,54.04 ,12200.t ,f , Virgo);
 INSERT INTO galaxy VALUES (5,'antanae Galaxy',1100,9.2,200,FALSE,TRUE,'Corvus');
 INSERT INTO galaxy VALUES (6,'Comet',1592,2.40,590,FALSE,FALSE,'Sculptor');
 ------------------------------------------------------------------------------------
@@ -98,11 +98,3 @@ ALTER TABLE star  ADD COLUMN galaxy_id  SERIAL  references galaxy;
 ALTER TABLE planet  ADD COLUMN moon_id SERIAL  references moon;
 ALTER TABLE comet ADD COLUMN galaxy_id SERIAL  references galaxy;
 ----------------------------------------------------------------------
-
-
-
-
-
-
-
-
